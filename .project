@@ -15,3 +15,60 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>
+
+/*
+ *Ian Hung
+ *Mr. Yee
+ *Period 3
+ */
+
+/**
+ * TestClock tests methods of the Clock interface, and the classes that implement it.
+ */
+public class TestClock
+{
+	/**
+	 * Tests methods of the Clock interface.
+	 * @param args not used
+	 */
+	public static void main(String[] args)
+	{
+		System.out.println("StringClock");
+		Clock myStringClock = new StringClock("15:22:10");
+		System.out.println("Hours: " + myStringClock.getHours());
+		System.out.println("Minutes: " + myStringClock.getMinutes());
+		System.out.println("Seconds: " + myStringClock.getSeconds());
+		System.out.println("Total Seconds: " + myStringClock.getTimeInSeconds());
+		System.out.println(myStringClock);
+		myStringClock.setHours(12);
+		myStringClock.setMinutes(5);
+		myStringClock.setSeconds(55);
+		System.out.println(myStringClock);
+		System.out.println("Total Seconds: " + myStringClock.getTimeInSeconds());
+		
+		StringClock otherStringClock = new StringClock("05:10:10");
+		System.out.println ("Seconds Difference: " + ((StringClock)myStringClock).compareTo(otherStringClock));
+		// Uncomment the next lines for bonus
+		// myStringClock.tick();
+		// System.out.println (myStringClock);
+		
+		System.out.println("\nIntClock");
+		Clock myIntClock = new IntClock(0,35,22);
+		System.out.println("Hours: " + myIntClock.getHours());
+		System.out.println("Minutes: " + myIntClock.getMinutes());
+		System.out.println("Seconds: " + myIntClock.getSeconds());
+		System.out.println("Total Seconds: " + myIntClock.getTimeInSeconds());
+		System.out.println(myIntClock);
+		myIntClock.setHours(12);
+		myIntClock.setMinutes(4);
+		myIntClock.setSeconds(41);
+		System.out.println(myIntClock);
+		System.out.println("Total Seconds: " + myIntClock.getTimeInSeconds());
+		
+		IntClock otherIntClock = new IntClock(2,15,24);
+		System.out.println ("Seconds difference: " + ((IntClock)myIntClock).compareTo(otherIntClock));
+		// Uncomment the next lines for bonus
+		// myIntClock.tick();
+		// System.out.println(myIntClock);
+	}
+}
