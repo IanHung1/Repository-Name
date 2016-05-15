@@ -56,10 +56,11 @@ public class HouseMenu
 			int c = houses.get(i).getYearBuilt();
 			int d = houses.get(i).getZIPCode();
 			String e = houses.get(i).getNameOfOwner();
+			House f = new House(a, b, c, d, e);
 			if(houses.get(i).getNameOfOwner().equals(temp))
-				House f = new House(a,b,c,d,e);
+				return f;
 		}
-		return f;
+		return null;
 	}
 	
 	/** 
