@@ -205,6 +205,7 @@ class HouseMenuRunner extends JFrame implements ActionListener, MouseListener
 			else if (label.equals(three)) // Find an house in the list with specific owner
 			{
 				String houseOwner = JOptionPane.showInputDialog("House type you are looking for");
+				showItem(myCart.searchOwner(houseOwner));
 			}
 			
 			else if (label.equals(four)) // Display the list
